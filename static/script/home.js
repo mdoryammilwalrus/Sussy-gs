@@ -1,3 +1,10 @@
+const tips = [
+    'Modify Incognitos appearance & browser tab in <a href="#settings">settings.</a>',
+    'Access popular media & sites easily in <a href="#apps">apps.</a>',
+    'Obtain more Incognito links in our <a href="#community">community.</a>',    
+    'Support Incognito at our <a href="https://www.patreon.com/incognitotn">Patreon.</a>'
+];
+
 function access(app) {
     if (document.querySelector('header').hasAttribute('data-init')) {
         document.querySelector('header').removeAttribute('data-init')
@@ -13,13 +20,17 @@ function access(app) {
     app.nav.target.style.removeProperty('display');
     document.querySelector('#open-nav').setAttribute('data-open', '');
     
-    app.nav.community = app.createLink('#community', 'Community');
+    app.nav.community = app.createLink('javascript:goBlank();', 'Go about:blank');
     app.nav.support = app.createLink('#support', 'Support');
     app.nav.apps = app.createLink('#apps', 'Apps');
     app.nav.games = app.createLink('#gs', 'Games');
     app.nav.settings = app.createLink('#settings', '<i class="fas fa-sliders-h secondary"></i>', {
         id: 'apps'
     })
+    
+	app.main.tip = app.createElement('div', tips[Math.floor(Math.random()*tips.length)], {
+        class: 'tip'
+    });
 
     app.main.suggestions = app.createElement('div', [], {
         class: 'suggestions',
