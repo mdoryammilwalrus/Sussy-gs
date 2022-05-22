@@ -1,100 +1,226 @@
-function access(app) {
+import { App } from './app.js'
+import { gs } from './gs.js';
+import { apps } from './apps.js';
+import { access } from './home.js';
+import { options } from './options.js';
+import { support } from './support.js';
+import { community } from './community.js';
+
+window.app = new App();
+
+
+switch(localStorage.getItem('incog||background')) {
+    case 'stars':
+        particlesJS.load('.particles', './json/stars.json');
+        break;
+    case 'particles':
+        particlesJS.load('.particles', './json/particles.json'); 
+};
+
+app.openNav = function() {
+    document.querySelector('#close-nav').style.display = 'flex';
+    document.querySelector('nav').style.display = 'flex';
+};
+
+app.closeNav = function() {
+    document.querySelector('#close-nav').style.removeProperty('display')
+    document.querySelector('nav').style.removeProperty('display')
+};
+
+app.destroyParticles = function() {
+    if (window.pJSDom && window.pJSDom.length) window.pJSDom[0].pJS.fn.vendors.destroypJS();
+    window.pJSDom = [];
+    return true;
+};
+
+document.querySelector('#open-nav').addEventListener('click', app.openNav);
+document.querySelector('#close-nav').addEventListener('click', app.closeNav);
+
+document.title = localStorage.getItem('incog||title') || 'Incognito';
+window.icon = document.querySelector('#favicon');
+
+icon.href = localStorage.getItem('incog||icon') || './index.svg';
+
+app.on('init', () => {
+    app.icon = document.querySelector('#favicon');
+    app.search.back = app.createElement('a', 'chevron_left', {
+        class: 'submit', 
+        style: {
+            'font-family': 'Material Icons',
+            'font-size': '30px',
+            'color': 'var(--accent)',
+            'display': 'none',
+        }
+    });
+    app.search.title = app.createElement('div', [], {
+        class: 'title',
+        style: {
+            'font-size': '16px',
+            'font-weight': '500',
+            color: 'var(--accent)',
+            display: 'none',
+        }
+    });
+    app.search.logo = createLink('#', '<svg class="nav-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 365.37 365.37"><defs>    <style>       .cls-1{    fill:none;    stroke-width:18px;}  .cls-1, .cls-2 {    stroke: var(--accent);    stroke-miterlimit:10;} .cls-2 {    fill: var(--accent);    stroke-width:5px;}    </style>  </defs><circle class="cls-1" cx="182.68" cy="182.68" r="173.68"></circle><path class="cls-2" d="M210.41,66.38A115.27,115.27,0,0,1,70.52,248.19,134,134,0,1,0,210.41,66.38Z" transform="translate(-17.32 -17.32)"></path></svg>', {
+        style: {
+            display: 'none'
+        }
+    });
+    app.search.input = app.createElement('input', [], {
+        attrs: {
+            placeholder: ''
+        },
+        class: 'interactive',
+    });
+    app.search.submit = app.createElement('button', '<i class="fas fa-search"></i>', {
+        class: 'submit', 
+        style: {
+            display: 'none'
+        }
+    });
+});
+
+app.on('exit', async () => {
+    document.querySelector('#open-nav').removeAttribute('data-open');
     if (document.querySelector('header').hasAttribute('data-init')) {
         document.querySelector('header').removeAttribute('data-init')
     };
-
-    app.search.back.style.display = 'none';
-    app.search.logo.style.display = 'inline';
-    app.search.logo.style.marginLeft = '0';
-    app.search.submit.style.display = 'inline';
-    app.search.input.style.removeProperty('display');
-    app.search.input.placeholder = 'Search the web';
-    app.header.target.setAttribute('data-page', '');
-    app.nav.target.style.removeProperty('display');
-    document.querySelector('#open-nav').setAttribute('data-open', '');
     
-    app.nav.community = app.createLink('javascript:goBlank();', 'Go about:blank');
-    app.nav.support = app.createLink('#support', 'Support');
-    app.nav.apps = app.createLink('#apps', 'Apps');
-    app.nav.games = app.createLink('#gs', 'Games');
-    app.nav.settings = app.createLink('#settings', '<i class="fas fa-sliders-h secondary"></i>', {
-        id: 'apps'
-    })
-
-    app.main.suggestions = app.createElement('div', [], {
-        class: 'suggestions',
-        style: {
-            display: 'block'
-        } 
-    });
-
-    app.search.input.setAttribute(
-        'oninput',
-        '(' + (async function() {
-            app.main.suggestions.innerHTML = '';
-            if (!event.target.value) {
-                app.nav.target.style.removeProperty('display');
-                app.header.target.setAttribute('data-page', '');
-                app.search.logo.style.display = 'inline';
-                return;
-            }
-            app.header.target.removeAttribute('data-page');
-            app.nav.target.style.display = 'none';
-            app.search.logo.style.display = 'none';
-
-            clearTimeout(app.timeout);
-            app.timeout = setTimeout(async () => {
-                const res = await fetch('https://incog.dev/bare/v1/', {
-                    headers: {
-                        'x-bare-host': 'duckduckgo.com',
-                        'x-bare-protocol': 'https:',
-                        'x-bare-path': '/ac/?q=' + encodeURIComponent(event.target.value),
-                        'x-bare-port': '443',
-                        'x-bare-headers': '{}',
-                        'x-bare-forward-headers': '[]'
-                    }
-                })
-                const json = await res.json();
-
-                for (const suggestion of json) {
-                    app.main.suggestions.append(
-                        app.createElement('div', suggestion.phrase, {
-                            class: 'suggestion',
-                            events: {
-                                click() {
-                                    app.search.input.value = suggestion.phrase;
-                                    const frame = document.querySelector('iframe');
-                                    document.querySelector('main').style.display = 'none';
-                                    document.querySelector('header').style.display = 'none';
-                                    frame.style.display = 'block';
-                                    frame.src = './load.html#' + encodeURIComponent(btoa(suggestion.phrase));
-                                    document.querySelector('.access-panel').style.removeProperty('display');
-                                }
-                            }
-                        })
-                    )
-                };
-            }, 400);
-
-        }).toString() + ')()'
-    );
-    app.search.input.setAttribute('form', 'access-form');
-    app.search.submit.setAttribute('form', 'access-form');
-
-    const params = new URLSearchParams(window.location.search);
-
-    if (params.has('link')) {
-        app.main.target.style.display = 'none';
-        app.header.target.style.display = 'none';
-        
-        const frame = document.querySelector('.access-frame');
-
-        frame.src = '/load.html#' + encodeURIComponent(params.get('link'));
-        frame.style.display = 'block';
-
-        document.querySelector('.access-panel').style.removeProperty('display');
-        history.replaceState('', '', window.location.pathname + '#');
+    if (app.search.logo.style.display === 'none') {
+        app.search.logo.style.removeProperty('display');
     };
+
+    if (document.querySelector('header').hasAttribute('data-page')) {
+        document.querySelector('header').removeAttribute('data-page');
+    };
+
+    app.search.logo.style.display = 'none';
+    app.search.submit.style.display = 'none';
+
+    app.search.input.removeAttribute('oninput');
+    app.search.title.textContent = '';
+    app.search.title.style.display = 'none';
+
+    app.nav.clear();
+    app.main.clear();
+
+    app.main.target.classList.toggle('transition')
+});
+
+
+app.on('after', () => {
+    app.main.target.classList.toggle('transition')
+});
+
+
+document.querySelector('#access-form').addEventListener('submit', event => {
+    event.preventDefault();
+    app.main.target.style.display = 'none';
+    app.header.target.style.display = 'none';
+    
+    const frame = document.querySelector('.access-frame');
+
+    frame.src = '/load.html#' + btoa(event.target[0].value);
+    frame.style.display = 'block';
+
+    document.querySelector('.access-panel').style.removeProperty('display');
+});
+
+document.querySelector('.close-access').addEventListener('click', event => {
+    event.preventDefault();
+    app.main.target.style.display = 'block';
+    app.header.target.style.display = 'flex';
+    
+    const frame = document.querySelector('.access-frame');
+
+    frame.src = 'about:blank';
+    frame.style.display = 'none';
+
+    document.querySelector('.access-panel').style.display = 'none';
+});
+
+document.querySelector('.refresh-access').addEventListener('click', () => {
+    const frame = document.querySelector('.access-frame');
+    const win = frame.contentWindow;
+
+    try {
+        win.location.reload();
+    } catch(e) {
+
+    };
+});
+
+document.querySelector('.access-link').addEventListener('click', () => {
+    const frame = document.querySelector('.access-frame');
+    const win = frame.contentWindow;
+    
+    if (win.__uv) {
+        navigator.clipboard.writeText(
+            new URL('./?link=' + encodeURIComponent(btoa(win.__uv.location.href)), location.href).href
+        );
+    };
+
+});
+
+document.querySelector('.access-panel .controls .icon').addEventListener('error', event => {
+    event.target.src = 'img/globe.svg';
+});
+
+
+document.querySelector('.access-panel').addEventListener('mouseenter', async event => {
+    const frame = document.querySelector('.access-frame');
+    const win = frame.contentWindow;
+
+    if (win && win.__uv) {
+        document.querySelector('.access-panel .controls input').value = Object.getOwnPropertyDescriptor(Document.prototype, 'title').get.call(win.document);
+        const favi = document.querySelector.call(win.document, 'link[rel=icon]');
+
+        if (favi && Object.getOwnPropertyDescriptor(HTMLLinkElement.prototype, 'href').get.call(favi)) {
+            const res = await win.__uv.client.fetch.fetch.call(
+                win,
+                Object.getOwnPropertyDescriptor(HTMLLinkElement.prototype, 'href').get.call(favi)
+            );
+
+            const blob = await res.blob();
+            const url = URL.createObjectURL(blob);
+
+            document.querySelector('.access-panel .controls .icon').src = url;
+            URL.revokeObjectURL(url);
+        } else {
+            const res = await win.__uv.client.fetch.fetch.call(
+                win,
+                win.__uv.rewriteUrl(
+                    '/favicon.ico'
+                )
+            );
+
+            const blob = await res.blob();
+            const url = URL.createObjectURL(blob);
+
+            document.querySelector('.access-panel .controls .icon').src = url;
+            URL.revokeObjectURL(url);
+        };
+    };
+});
+
+app.on('default', access);
+app.on('#gs', gs);
+app.on('#apps', apps);
+app.on('#settings', options);
+app.on('#support', support);
+app.on('#community', community);
+
+app.init();
+
+
+function createLink(href = null, content = '', config = {}) {
+    const elem = app.createElement('a', content, config);
+    if (href) elem.href = href;
+    return elem;
 };
 
-export { access };
+function timeout(time = 1000) {
+    return new Promise(resolve => 
+        setTimeout(resolve, time)
+    );
+};
