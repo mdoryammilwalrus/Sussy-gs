@@ -6,7 +6,7 @@ image
          
 <h1>Incognito</h1>
 
-<h3>Access the world wide web</h3>
+<h3>among us proxies helped shape and form the proxy community</h3>
 
 </div>
 
