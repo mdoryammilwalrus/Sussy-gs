@@ -39,7 +39,7 @@ document.querySelector('#close-nav').addEventListener('click', app.closeNav);
 document.title = localStorage.getItem('incog||title') || 'Incognito';
 window.icon = document.querySelector('#favicon');
 
-icon.href = localStorage.getItem('incog||icon') || './index.svg';
+icon.href = localStorage.getItem('incog||icon') || './favicon.png';
 
 app.on('init', () => {
     app.icon = document.querySelector('#favicon');
