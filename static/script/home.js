@@ -13,7 +13,7 @@ function access(app) {
     app.nav.target.style.removeProperty('display');
     document.querySelector('#open-nav').setAttribute('data-open', '');
     
-    app.nav.community = app.createLink('#community', 'Community');
+    app.nav.community = app.createLink('javascript:goBlank();', 'Go about:blank');
     app.nav.support = app.createLink('#support', 'Support');
     app.nav.apps = app.createLink('#apps', 'Apps');
     app.nav.games = app.createLink('#gs', 'Games');
