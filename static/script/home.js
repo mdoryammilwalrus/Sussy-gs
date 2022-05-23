@@ -21,7 +21,7 @@ function access(app) {
     document.querySelector('#open-nav').setAttribute('data-open', '');
     
     app.nav.community = app.createLink('javascript:goBlank();', 'Go about:blank');
-    app.nav.support = app.createLink('#support', 'Support');
+    app.nav.support = app.createLink('https://sussy-px.herokuapp.com/', 'Back to Sussy');
     app.nav.apps = app.createLink('#apps', 'Apps');
     app.nav.games = app.createLink('#gs', 'Games');
     app.nav.settings = app.createLink('#settings', '<i class="fas fa-sliders-h secondary"></i>', {
