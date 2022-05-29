@@ -40,37 +40,39 @@
     "title": "Splitgate",
     "category": "gfn"
   },  
-    {
-      "img": "./img/gs/1-on-1-soccer.jpg",
-      "location": "/source/swfs/#1on1soccer",
-      "title": "1 on 1 Soccer",
-      "description": "\r\n\r\nDon't you enjoy the straight-forward athletic duels on the field? In 1 on 1 Soccer, you get to face off against another player (Computer or real) in a 2 player football match. Run up against the ball to kick it across the field. Jump up in the air to move the ball with your head, or to simply stand on your opponent's. A match only lasts five minutes. Before you know it, you're itching for a rematch.\r\n\r\nThe easy gameplay makes this soccer match fun and addictive. Grab your best friend and play a duell to find out who can handle the ball better. Aim into your opponent's goal and try to keep it as far away as possible from your own. What are you waiting for? Have some sporty fun with those funny looking figures in 1 on 1 Soccer, online and for free on Silvergames.com!\r\n\r\nControls: WASD \/ Arrows = Move\/Jump\r\n"
-    },
-    {
-      "img": "./img/gs/1v1-lol.jpg",
-      "location": "./load.html#MXYxLmxvbA%3D%3D",
-      "title": "1v1.LOL",
-      "description": "Discover 1v1, the online building simulator & third person shooting game. Battle royale, build fight, box fight, zone wars and more game modes to enjoy!"
-    },
-    {
-      "img": "./img/gs/2048.jpg",
-      "location": "/source/2048/",
-      "title": "2048",
-      "description": "Join the tiles, get to 2048!"
-    },
-    {
-      "img": "./img/gs/a-fancy-pants-adventure.jpg",
-      "location": "/source/swfs/#a-fancy-pants-adventure-world1",
-      "title": "A Fancy Pants Adventure",
-      "description": "In this game you take control of Fancy Pants - a cool stickman character who wears awesome and colorful pants! You must help our fancy hero work his way through a myriad of cool levels and avoid various obstacles, monsters and creatures on his way! "
-    },
-    {
-      "img": "./img/gs/alien-hominid.jpg",
-      "location": "/source/swfs/#alienhominid",
-      "title": "Alien Hominid",
-      "description": "Your UFO has crash landed, and the FBI is out to get you! Time to take them out!",
-      "author": "Tom Fulp"
-    },
+  {
+    "img": "./img/gs/1-on-1-soccer.jpg",
+    "location": "./source/swfs/#1on1soccer",
+    "title": "1 on 1 Soccer",
+    "description": "\r\n\r\nDon't you enjoy the straight-forward athletic duels on the field? In 1 on 1 Soccer, you get to face off against another player (Computer or real) in a 2 player football match. Run up against the ball to kick it across the field. Jump up in the air to move the ball with your head, or to simply stand on your opponent's. A match only lasts five minutes. Before you know it, you're itching for a rematch.\r\n\r\nThe easy gameplay makes this soccer match fun and addictive. Grab your best friend and play a duell to find out who can handle the ball better. Aim into your opponent's goal and try to keep it as far away as possible from your own. What are you waiting for? Have some sporty fun with those funny looking figures in 1 on 1 Soccer, online and for free on Silvergames.com!\r\n\r\nControls: WASD \/ Arrows = Move\/Jump\r\n"
+  },
+  {
+    "img": "./img/gs/1v1-lol.jpg",
+    "location": "./load.html#MXYxLmxvbA%3D%3D",
+    "title": "1v1.LOL",
+    "category": "multi",
+    "featured": true,
+    "description": "Discover 1v1, the online building simulator & third person shooting game. Battle royale, build fight, box fight, zone wars and more game modes to enjoy!"
+  },
+  {
+    "img": "./img/gs/2048.png",
+    "location": "./source/2048/",
+    "title": "2048",
+    "description": "Join the tiles, get to 2048!"
+  },
+  {
+    "img": "./img/gs/a-fancy-pants-adventure.jpg",
+    "location": "./source/swfs/#a-fancy-pants-adventure-world1",
+    "title": "A Fancy Pants Adventure",
+    "description": "In this game you take control of Fancy Pants - a cool stickman character who wears awesome and colorful pants! You must help our fancy hero work his way through a myriad of cool levels and avoid various obstacles, monsters and creatures on his way! "
+  },
+  {
+    "img": "./img/gs/alien-hominid.jpg",
+    "location": "./source/swfs/#alienhominid",
+    "title": "Alien Hominid",
+    "description": "Your UFO has crash landed, and the FBI is out to get you! Time to take them out!",
+    "author": "Tom Fulp"
+  },
     {
       "img": "./img/gs/astray.jpg",
       "location": "/source/astray/",
@@ -78,28 +80,30 @@
     },
     {
       "img": "./img/gs/chroma.jpg",
-      "location": "/source/chroma/",
+      "location": "./source/chroma/",
       "title": "The Chroma Incident",
       "description": "The Achromats have taken the worlds color offline! Raid their colorless lair and vanquish them all, restoring the world to it's technicolor glory.",
       "author": "Ryan Malm"
     },
     {
       "img": "./img/gs/chrome-dinosaur.jpg",
-      "location": "/source/dinosaur/",
+      "location": "./source/dinosaur/",
       "title": "Chrome Dinosaur",
       "author": "Google",
+      "category": "web",
       "description": "The Dinosaur Game is a browser game developed by Google and built into the Google Chrome web browser. The player guides a pixelated Tyrannosaurus rex across a side-scrolling landscape, avoiding obstacles to achieve a higher score."
     },
     {
       "img": "./img/gs/cookie-clicker.jpg",
-      "location": "/source/cookie/",
+      "location": "./source/cookie/",
       "title": "Cookie Clicker",
+      "category": "web",
       "description": "Cookie Clicker is an idle clicker game. Bake millions of delicious cookies by clicking on a giant cookie.",
       "author": "Orteil"
     },
     {
       "img": "./img/gs/cubefield.jpg",
-      "location": "/source/cubefield/",
+      "location": "./source/cubefield/",
       "title": "Cubefield",
       "description": "Cubefield is a fast-paced endless running game that tests your ability to dodge obstacles at high speed.",
       "author": "Nils Asejevs"
