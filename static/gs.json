@@ -155,6 +155,7 @@
     {
       "img": "./img/gs/littlebigsnake.jpg",
       "location": "./load.html#bGl0dGxlYmlnc25ha2UuY29t",
+      "category": "multi",
       "title": "LittleBigSnake"
     },
     {
@@ -170,7 +171,8 @@
     {
       "img": "./img/gs/paper-io.jpg",
       "location": "./load.html#cGFwZXItaW8uY29t",
-      "title": "Paper.io"
+      "title": "Paper.io",
+      "category": "multi"
     },
     {
       "img": "./img/gs/portal2d.jpg",
@@ -184,13 +186,15 @@
     },
     {
       "img": "./img/gs/retro-bowl.jpg",
-      "location": "/source/retro-bowl/",
+      "location": "./source/retro-bowl/",
+      "category": "web",
       "title": "Retro Bowl"
     },
     {
       "img": "./img/gs/sm64.jpg",
-      "location": "/source/sm64/",
-      "title": "Super Mario 64"
+      "location": "./source/sm64/",
+      "title": "Super Mario 64",
+      "category": "n64"
     },
     {
       "img": "./img/gs/spaceinvaders.jpg",
@@ -199,18 +203,21 @@
     },
     {
       "img": "./img/gs/vex3.jpg",
-      "location": "/source/vex3/",
-      "title": "Vex 3"
+      "location": "./source/vex3/",
+      "title": "Vex 3",
+      "category": "web"
     },
     {
       "img": "./img/gs/vex4.jpg",
-      "location": "/source/vex4/",
-      "title": "Vex 4"
+      "location": "./source/vex4/",
+      "title": "Vex 4",
+      "category": "web"
     },
     {
       "img": "./img/gs/vex5.jpg",
-      "location": "/source/vex5/",
-      "title": "Vex 5"
+      "location": "./source/vex5/",
+      "title": "Vex 5",
+      "category": "web"
     },
     {
       "img": "./img/gs/warfare1917.png",
@@ -225,6 +232,7 @@
     {
       "img": "./img/gs/zombsroyale.jpg",
       "location": "./load.html#em9tYnNyb3lhbGUuaW8%3D",
-      "title": "ZombsRoyale.io"
+      "title": "ZombsRoyale.io",
+      "category": "multi"
     }
   ]
