@@ -5,8 +5,7 @@
     "title": "Krunker.io",
     "author": "Yendis Entertainment",
     "description": "Krunker is a remarkable first-person shooter game where you fall right into a dark world, tasked with fighting against other players from around the world.",
-    "category": "multi",
-    "featured": true
+    "category": "multi"
   },
   {
     "img": "./img/gs/moo.png",
@@ -98,7 +97,8 @@
       "title": "Cookie Clicker",
       "category": "web",
       "description": "Cookie Clicker is an idle clicker game. Bake millions of delicious cookies by clicking on a giant cookie.",
-      "author": "Orteil"
+      "author": "Orteil",
+      "featured": true
     },
     {
       "img": "./img/gs/cubefield.jpg",
