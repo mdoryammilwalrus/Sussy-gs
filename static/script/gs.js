@@ -145,8 +145,21 @@ async function compileGs(app) {
         };
     };
     return [
-        
-        app.createElement('section', [app.createElement('span', 'Multiplayer', {
+        app.createElement('section', [app.createElement('span', 'Featured', {
+        style: {
+            display: 'block',
+            'margin-bottom': '30px',
+            'font-size': '18px',
+            'font-weight': '500'
+        }
+    }), app.createElement('div', list.featured, {
+        class: 'gs-library'
+    })], {
+        class: 'data-section featured category',
+        attrs: {
+            'data-category': 'featured'
+        }
+    }), app.createElement('section', [app.createElement('span', 'Multiplayer', {
         style: {
             display: 'block',
             'margin-bottom': '30px',
