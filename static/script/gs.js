@@ -144,21 +144,9 @@ async function compileGs(app) {
             (list[entry.category] || list.indie).push(elem);
         };
     };
-    return [app.createElement('section', [app.createElement('span', 'Featured', {
-        style: {
-            display: 'block',
-            'margin-bottom': '30px',
-            'font-size': '18px',
-            'font-weight': '500'
-        }
-    }), app.createElement('div', list.featured, {
-        class: 'gs-library'
-    })], {
-        class: 'data-section featured category',
-        attrs: {
-            'data-category': 'featured'
-        }
-    }), app.createElement('section', [app.createElement('span', 'Multiplayer', {
+    return [
+        
+        app.createElement('section', [app.createElement('span', 'Multiplayer', {
         style: {
             display: 'block',
             'margin-bottom': '30px',
@@ -172,7 +160,7 @@ async function compileGs(app) {
         attrs: {
             'data-category': 'multi'
         }
-    }), app.createElement('section', [app.createElement('span', 'Mobile & Web', {
+    }), app.createElement('section', [app.createElement('span', 'Mobile', {
         style: {
             display: 'block',
             'margin-bottom': '30px',
@@ -186,7 +174,7 @@ async function compileGs(app) {
         attrs: {
             'data-category': 'web'
         }
-    }), app.createElement('section', [app.createElement('span', 'Indie', {
+    }), app.createElement('section', [app.createElement('span', 'Web', {
         style: {
             display: 'block',
             'margin-bottom': '30px',
