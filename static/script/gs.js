@@ -138,6 +138,7 @@ async function compileGs(app) {
                 }
             }
         });
+        (list[entry.category] || list.web).push(elem);
     };
     return [
     app.createElement('section', [app.createElement('span', 'Multiplayer', {
