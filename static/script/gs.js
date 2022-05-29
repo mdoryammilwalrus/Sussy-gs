@@ -141,7 +141,7 @@ async function compileGs(app) {
         if (entry.featured) {
             list.featured.push(elem);
         } else {
-            (list[entry.category] || list.indie).push(elem);
+            (list[entry.category] || list.web).push(elem);
         };
     };
     return [
@@ -173,7 +173,7 @@ async function compileGs(app) {
         attrs: {
             'data-category': 'multi'
         }
-    }), app.createElement('section', [app.createElement('span', 'Mobile', {
+    }), app.createElement('section', [app.createElement('span', 'Mobile & Web', {
         style: {
             display: 'block',
             'margin-bottom': '30px',
@@ -186,20 +186,6 @@ async function compileGs(app) {
         class: 'data-section web category',
         attrs: {
             'data-category': 'web'
-        }
-    }), app.createElement('section', [app.createElement('span', 'Web', {
-        style: {
-            display: 'block',
-            'margin-bottom': '30px',
-            'font-size': '18px',
-            'font-weight': '500'
-        }
-    }), app.createElement('div', list.indie, {
-        class: 'gs-library'
-    })], {
-        class: 'data-section indie category',
-        attrs: {
-            'data-category': 'indie'
         }
     }), 
 
