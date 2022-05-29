@@ -110,23 +110,26 @@
     },
     {
       "img": "./img/gs/doodle-jump.jpg",
-      "location": "/source/doodle-jump/",
+      "location": "./source/doodle-jump/",
       "title": "Doodle Jump",
+      "category": "web",
       "author": "Lima Sky"
     },
     {
       "img": "./img/gs/fireboy-and-watergirl-forest-temple.jpg",
-      "location": "/source/fireboy-and-watergirl-forest-temple/",
+      "location": "./source/fireboy-and-watergirl-forest-temple/",
+      "category": "web",
       "title": "Fireboy & Watergirl Into the Forest Temple"
     },
     {
       "img": "./img/gs/flappybird.jpg",
-      "location": "/source/flappybird/",
+      "location": "./source/flappybird/",
+      "category": "web",
       "title": "Flappy Bird"
     },
     {
       "img": "./img/gs/friendlyfire.jpg",
-      "location": "/source/friendlyfire/",
+      "location": "./source/friendlyfire/",
       "title": "Friendly Fire"
     },
     {
