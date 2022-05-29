@@ -196,21 +196,25 @@ async function compileGs(app) {
         attrs: {
             'data-category': 'indie'
         }
-    }), app.createElement('section', [app.createElement('span', 'Nintendo', {
+    }), 
+
+    app.createElement('section', [app.createElement('span', 'Nintendo', {
         style: {
             display: 'block',
             'margin-bottom': '30px',
             'font-size': '18px',
             'font-weight': '500'
         }
-    }), app.createElement('div', [...list.gba, ...list.snes, ...list.nes, ...list.n64], {
+    }), app.createElement('div', [...list.n64], {
         class: 'gs-library'
     })], {
         class: 'data-section nintendo category',
         attrs: {
             'data-category': 'nintendo'
         }
-    }), app.createElement('section', [app.createElement('span', 'GeForce Now', {
+    }), 
+    
+    app.createElement('section', [app.createElement('span', 'GeForce Now', {
         style: {
             display: 'block',
             'margin-bottom': '30px',
