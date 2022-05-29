@@ -51,7 +51,6 @@
     "location": "./load.html#MXYxLmxvbA%3D%3D",
     "title": "1v1.LOL",
     "category": "multi",
-    "featured": true,
     "description": "Discover 1v1, the online building simulator & third person shooting game. Battle royale, build fight, box fight, zone wars and more game modes to enjoy!"
   },
   {
@@ -150,6 +149,7 @@
     {
       "img": "./img/gs/justfall-lol.jpg",
       "location": "./load.html#anVzdGZhbGwubG9s",
+      "category": "multi",
       "title": "Justfall.LOL"
     },
     {
