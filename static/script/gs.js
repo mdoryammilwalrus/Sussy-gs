@@ -66,6 +66,8 @@ async function compileGs(app) {
     const list = {
         multi: [],
         web: [],
+        multi: [],
+        featured: [],
         nes: [],
         snes: [],
         gba: [],
