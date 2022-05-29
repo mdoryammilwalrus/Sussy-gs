@@ -68,6 +68,10 @@ async function compileGs(app) {
         featured: [],
         web: [],
         indie: [],
+        nes: [],
+        snes: [],
+        gba: [],
+        sega: [],
         gfn: [],
         n64: [],
     };
