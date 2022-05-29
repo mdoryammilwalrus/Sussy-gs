@@ -22,6 +22,13 @@
     "title": "Shell Shockers"
   },
   {
+    "img": "./img/gs/among.jpg",
+    "location": "./load.html#aHR0cHM6Ly9ub3cuZ2cvcGxheS9pbm5lcnNsb3RoLWxsYy80MDQ3L2Ftb25nLXVz",
+    "category": "multi",
+    "featured": true,
+    "title": "Among Us"
+  },
+  {
     "img": "./img/gs/skiribbl.png",
     "location": "./load.html#aHR0cHM6Ly9za3JpYmJsLmlv",
     "category": "multi",
