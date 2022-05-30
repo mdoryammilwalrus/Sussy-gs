@@ -44,6 +44,11 @@
         "img": "./img/apps/cmg.png",
         "location": "https://www.coolmathgames.com"
     },
+        {
+        "title": "CoolMathGames",
+        "img": "./img/apps/cmg.png",
+        "location": "https://gfiles-fork-production.up.railway.app"
+    },
     {
         "title": "Geforce Now",
         "img": "./img/apps/gfnow.png",
