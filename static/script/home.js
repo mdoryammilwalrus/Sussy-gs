@@ -20,11 +20,11 @@ function access(app) {
     app.nav.target.style.removeProperty('display');
     document.querySelector('#open-nav').setAttribute('data-open', '');
     
-    app.nav.community = app.createLink('https://www.youtube-nocookie.com/embed/H8ZH_mkfPUY?controls=0&autoplay=1', 'Go about:blank');
-    app.nav.support = app.createLink('https://www.youtube-nocookie.com/embed/H8ZH_mkfPUY?controls=0&autoplay=1', 'Back to Sussy');
-    app.nav.apps = app.createLink('https://www.youtube-nocookie.com/embed/H8ZH_mkfPUY?controls=0&autoplay=1', 'Apps');
-    app.nav.games = app.createLink('https://www.youtube-nocookie.com/embed/H8ZH_mkfPUY?controls=0&autoplay=1', 'Games');
-    app.nav.settings = app.createLink('https://www.youtube-nocookie.com/embed/H8ZH_mkfPUY?controls=0&autoplay=1', '<i class="fas fa-sliders-h secondary"></i>', {
+    app.nav.community = app.createLink('https://www.youtube-nocookie.com/embed/H8ZH_mkfPUY?mute=1&autoplay=1', 'Go about:blank');
+    app.nav.support = app.createLink('https://www.youtube-nocookie.com/embed/H8ZH_mkfPUY?mute=1&autoplay=1', 'Back to Sussy');
+    app.nav.apps = app.createLink('https://www.youtube-nocookie.com/embed/H8ZH_mkfPUY?mute=1&autoplay=1', 'Apps');
+    app.nav.games = app.createLink('https://www.youtube-nocookie.com/embed/H8ZH_mkfPUY?mute=1&autoplay=1', 'Games');
+    app.nav.settings = app.createLink('https://www.youtube-nocookie.com/embed/H8ZH_mkfPUY?mute=1&autoplay=1', '<i class="fas fa-sliders-h secondary"></i>', {
         id: 'apps'
     })
     
