@@ -151,11 +151,6 @@
       "category": "n64"
     },
     {
-      "img": "./img/gs/spaceinvaders.jpg",
-      "location": "/source/spaceinvaders/",
-      "title": "Space Invaders"
-    },
-    {
       "img": "./img/gs/vex3.jpg",
       "location": "./source/vex3/",
       "title": "Vex 3",
