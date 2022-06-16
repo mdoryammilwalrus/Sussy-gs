@@ -151,24 +151,6 @@
       "category": "n64"
     },
     {
-      "img": "./img/gs/vex3.jpg",
-      "location": "./source/vex3/",
-      "title": "Vex 3",
-      "category": "web"
-    },
-    {
-      "img": "./img/gs/vex4.jpg",
-      "location": "./source/vex4/",
-      "title": "Vex 4",
-      "category": "web"
-    },
-    {
-      "img": "./img/gs/vex5.jpg",
-      "location": "./source/vex5/",
-      "title": "Vex 5",
-      "category": "web"
-    },
-    {
       "img": "./img/gs/warfare1917.png",
       "location": "/source/swfs/#warfare1917",
       "title": "Warfare 1917"
