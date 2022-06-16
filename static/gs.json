@@ -168,12 +168,6 @@
       "title": "Pac Man"
     },
     {
-      "img": "./img/gs/paper-io.jpg",
-      "location": "./load.html#cGFwZXItaW8uY29t",
-      "title": "Paper.io",
-      "category": "multi"
-    },
-    {
       "img": "./img/gs/portal2d.jpg",
       "location": "/source/swfs/#portal2d",
       "title": "Portal 2D"
