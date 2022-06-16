@@ -85,11 +85,6 @@
       "title": "Friendly Fire"
     },
     {
-      "img": "./img/gs/gopherkart.jpg",
-      "location": "/source/gopher-kart/",
-      "title": "Gopher Kart"
-    },
-    {
       "img": "./img/gs/littlebigsnake.jpg",
       "location": "./load.html#bGl0dGxlYmlnc25ha2UuY29t",
       "category": "multi",
@@ -99,11 +94,6 @@
       "img": "./img/gs/minecraft.jpg",
       "location": "/source/mc-classic/",
       "title": "Minecraft Classic"
-    },
-    {
-      "img": "./img/gs/pacman.jpg",
-      "location": "/source/pacman/",
-      "title": "Pac Man"
     },
     {
       "img": "./img/gs/portal2d.jpg",
