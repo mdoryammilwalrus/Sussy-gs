@@ -40,12 +40,6 @@
     "description": "\r\n\r\nDon't you enjoy the straight-forward athletic duels on the field? In 1 on 1 Soccer, you get to face off against another player (Computer or real) in a 2 player football match. Run up against the ball to kick it across the field. Jump up in the air to move the ball with your head, or to simply stand on your opponent's. A match only lasts five minutes. Before you know it, you're itching for a rematch.\r\n\r\nThe easy gameplay makes this soccer match fun and addictive. Grab your best friend and play a duell to find out who can handle the ball better. Aim into your opponent's goal and try to keep it as far away as possible from your own. What are you waiting for? Have some sporty fun with those funny looking figures in 1 on 1 Soccer, online and for free on Silvergames.com!\r\n\r\nControls: WASD \/ Arrows = Move\/Jump\r\n"
   },
   {
-    "img": "./img/gs/2048.png",
-    "location": "./source/2048/",
-    "title": "2048",
-    "description": "Join the tiles, get to 2048!"
-  },
-  {
     "img": "./img/gs/a-fancy-pants-adventure.jpg",
     "location": "./source/swfs/#a-fancy-pants-adventure-world1",
     "title": "A Fancy Pants Adventure",
