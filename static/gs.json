@@ -98,19 +98,9 @@
       "title": "Friendly Fire"
     },
     {
-      "img": "./img/gs/geometry.jpg",
-      "location": "/source/geometry/",
-      "title": "Geometry Dash"
-    },
-    {
       "img": "./img/gs/gopherkart.jpg",
       "location": "/source/gopher-kart/",
       "title": "Gopher Kart"
-    },
-    {
-      "img": "./img/gs/hexgl.jpg",
-      "location": "/source/hexgl/",
-      "title": "HexGL"
     },
     {
       "img": "./img/gs/littlebigsnake.jpg",
