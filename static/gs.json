@@ -16,12 +16,6 @@
     "description": "MooMoo.io is a multiplayer base building and survival game. Collect resources around the map to build a village. Your Windmills generate points over time. But make sure to protect them from other players."
   },
   {
-    "img": "./img/gs/shellshockers.jpg",
-    "location": "./load.html#aHR0cHM6Ly9zaGVsbHNob2NrLmlv",
-    "category": "multi",
-    "title": "Shell Shockers"
-  },
-  {
     "img": "./img/gs/skiribbl.png",
     "location": "./load.html#aHR0cHM6Ly9za3JpYmJsLmlv",
     "category": "multi",
@@ -44,13 +38,6 @@
     "location": "./source/swfs/#1on1soccer",
     "title": "1 on 1 Soccer",
     "description": "\r\n\r\nDon't you enjoy the straight-forward athletic duels on the field? In 1 on 1 Soccer, you get to face off against another player (Computer or real) in a 2 player football match. Run up against the ball to kick it across the field. Jump up in the air to move the ball with your head, or to simply stand on your opponent's. A match only lasts five minutes. Before you know it, you're itching for a rematch.\r\n\r\nThe easy gameplay makes this soccer match fun and addictive. Grab your best friend and play a duell to find out who can handle the ball better. Aim into your opponent's goal and try to keep it as far away as possible from your own. What are you waiting for? Have some sporty fun with those funny looking figures in 1 on 1 Soccer, online and for free on Silvergames.com!\r\n\r\nControls: WASD \/ Arrows = Move\/Jump\r\n"
-  },
-  {
-    "img": "./img/gs/1v1-lol.jpg",
-    "location": "./load.html#MXYxLmxvbA%3D%3D",
-    "title": "1v1.LOL",
-    "category": "multi",
-    "description": "Discover 1v1, the online building simulator & third person shooting game. Battle royale, build fight, box fight, zone wars and more game modes to enjoy!"
   },
   {
     "img": "./img/gs/2048.png",
@@ -146,12 +133,6 @@
       "title": "HexGL"
     },
     {
-      "img": "./img/gs/justfall-lol.jpg",
-      "location": "./load.html#anVzdGZhbGwubG9s",
-      "category": "multi",
-      "title": "Justfall.LOL"
-    },
-    {
       "img": "./img/gs/littlebigsnake.jpg",
       "location": "./load.html#bGl0dGxlYmlnc25ha2UuY29t",
       "category": "multi",
@@ -221,11 +202,5 @@
       "img": "./img/gs/warfare1944.jpg",
       "location": "/source/swfs/#warfare1944",
       "title": "Warfare 1944"
-    },
-    {
-      "img": "./img/gs/zombsroyale.jpg",
-      "location": "./load.html#em9tYnNyb3lhbGUuaW8%3D",
-      "title": "ZombsRoyale.io",
-      "category": "multi"
     }
   ]
