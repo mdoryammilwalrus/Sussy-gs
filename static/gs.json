@@ -1,13 +1,5 @@
 [
   {
-    "img": "./img/gs/moo.png",
-    "location": "./load.html#aHR0cHM6Ly9tb29tb28uaW8%3D",
-    "title": "Moomoo.io",
-    "author": "Yendis Entertainment",
-    "category": "multi",
-    "description": "MooMoo.io is a multiplayer base building and survival game. Collect resources around the map to build a village. Your Windmills generate points over time. But make sure to protect them from other players."
-  },
-  {
     "img": "./img/gs/skiribbl.png",
     "location": "./load.html#aHR0cHM6Ly9za3JpYmJsLmlv",
     "category": "multi",
@@ -78,7 +70,7 @@
     },
     {
       "img": "./img/gs/littlebigsnake.jpg",
-      "location": "./load.html#bGl0dGxlYmlnc25ha2UuY29t",
+      "location": "./load.html#aHR0cHM6Ly9saXR0bGViaWdzbmFrZS5jb20=",
       "category": "multi",
       "title": "LittleBigSnake"
     },
