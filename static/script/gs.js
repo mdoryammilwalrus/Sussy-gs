@@ -63,16 +63,11 @@ async function compileGs(app) {
     const res = await fetch('./gs.json');
     const json = await res.json();
     const list = {
-        multi: [],
-        web: [],
-        multi: [],
         featured: [],
-        nes: [],
-        snes: [],
-        gba: [],
-        sega: [],
-        gfn: [],
+        web: [],
+        indie: [],
         n64: [],
+        flash: [],
     };
     for (const entry of json) {
         const elem = app.createElement('div', [], {
@@ -140,21 +135,7 @@ async function compileGs(app) {
         (list[entry.category] || list.web).push(elem);
     };
     return [
-    app.createElement('section', [app.createElement('span', 'Multiplayer', {
-        style: {
-            display: 'block',
-            'margin-bottom': '30px',
-            'font-size': '18px',
-            'font-weight': '500'
-        }
-    }), app.createElement('div', list.multi, {
-        class: 'gs-library'
-    })], {
-        class: 'data-section multi category',
-        attrs: {
-            'data-category': 'multi'
-        }
-    }), app.createElement('section', [app.createElement('span', 'Mobile & Web', {
+app.createElement('section', [app.createElement('span', 'Mobile & Web', {
         style: {
             display: 'block',
             'margin-bottom': '30px',
@@ -169,8 +150,41 @@ async function compileGs(app) {
             'data-category': 'web'
         }
     }), 
-
-    app.createElement('section', [app.createElement('span', 'Nintendo', {
+    app.createElement('section', [app.createElement('span', 'Indie', {
+        style: {
+            display: 'block',
+            'margin-bottom': '30px',
+            'font-size': '18px',
+            'font-weight': '500'
+        }
+    }),
+    app.createElement('div', list.indie, {
+        class: 'gs-library'
+    })
+], {
+    class: 'data-section indie category',
+    attrs: {
+        'data-category': 'indie'
+    }
+}),
+app.createElement('section', [app.createElement('span', 'Flash', {
+    style: {
+        display: 'block',
+        'margin-bottom': '30px',
+        'font-size': '18px',
+        'font-weight': '500'
+    }
+}),
+app.createElement('div', list.flash, {
+    class: 'gs-library'
+})
+], {
+class: 'data-section flash category',
+attrs: {
+    'data-category': 'flash'
+}
+}),
+app.createElement('section', [app.createElement('span', 'Nintendo', {
         style: {
             display: 'block',
             'margin-bottom': '30px',
@@ -183,22 +197,6 @@ async function compileGs(app) {
         class: 'data-section nintendo category',
         attrs: {
             'data-category': 'nintendo'
-        }
-    }), 
-    
-    app.createElement('section', [app.createElement('span', 'GeForce Now', {
-        style: {
-            display: 'block',
-            'margin-bottom': '30px',
-            'font-size': '18px',
-            'font-weight': '500'
-        }
-    }), app.createElement('div', list.gfn, {
-        class: 'gs-library'
-    })], {
-        class: 'data-section gfn category',
-        attrs: {
-            'data-category': 'gfn'
         }
     })]
 };
