@@ -1,22 +1,4 @@
-[
-  {
-    "img": "./img/gs/skiribbl.png",
-    "location": "./load.html#aHR0cHM6Ly9za3JpYmJsLmlv",
-    "category": "multi",
-    "title": "Skribbl.io"
-  },
-  {
-    "img": "./img/gs/fn.png",
-    "location": "./load.html#aHR0cHM6Ly9wbGF5LmdlZm9yY2Vub3cuY29tL21hbGwvIy9kZWVwbGluaz9nYW1lLWlkPTQ2YmZhYjA2LWQ4NjQtNDY1ZC05ZTU2LTJkOWU0NWNkZWUwYQ%3D%3D",
-    "title": "Fortnite",
-    "category": "gfn"
-  },
-  {
-    "img": "./img/gs/sg.jpg",
-    "location": "./load.html#aHR0cHM6Ly9wbGF5LmdlZm9yY2Vub3cuY29tL21hbGwvIy9kZWVwbGluaz9nYW1lLWlkPTM5Njk5ZmI3LTVhMDUtNDFlNi04NmIyLTNjZDZmZDZjNDU5Yw%3D%3D",
-    "title": "Splitgate",
-    "category": "gfn"
-  },  
+[  
   {
     "img": "./img/gs/1-on-1-soccer.jpg",
     "location": "./source/swfs/#1on1soccer",
@@ -67,12 +49,6 @@
       "img": "./img/gs/friendlyfire.jpg",
       "location": "./source/friendlyfire/",
       "title": "Friendly Fire"
-    },
-    {
-      "img": "./img/gs/littlebigsnake.jpg",
-      "location": "./load.html#aHR0cHM6Ly9saXR0bGViaWdzbmFrZS5jb20=",
-      "category": "multi",
-      "title": "LittleBigSnake"
     },
     {
       "img": "./img/gs/minecraft.jpg",
