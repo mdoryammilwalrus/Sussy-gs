@@ -1,13 +1,12 @@
 async function gs(app) {
     app.search.input.placeholder = 'Search library'
-    app.search.back.style.display = 'inline';
-    app.search.back.href = '#';
+    app.search.back.style.display = 'none';
     app.main.library = app.createElement('div', await compileGs(app), {
         style: {
             'margin-bottom': '40px'
         }
     });
-    app.main.emptySearch = app.createElement('div', [app.createElement('p', 'No results found.'), app.createElement('p', '<p>Want to suggest a game to be added? Reach out to any staff in our <a href="https://discord.gg/unblock">community</a>.</p>')], {
+    app.main.emptySearch = app.createElement('div', [app.createElement('p', 'No results found.')], {
         class: 'gs-empty',
         style: {
             display: 'none'
@@ -89,15 +88,13 @@ async function compileGs(app) {
             events: {
                 click(event) {
                     function foc() {
-                        if (window.location.hash !== '#gs' || !app.main.player) {
-                            return window.removeEventListener('click', foc);
-                        };
                         app.main.player.querySelector('iframe').contentWindow.focus()
                     };
                     app.main.library.style.display = 'none';
                     app.main.player.style.display = 'block';
                     app.search.input.style.display = 'none';
                     app.search.title.style.display = 'block';
+                    app.search.back.style.display = 'block';
                     app.search.title.textContent = entry.title;
                     window.addEventListener('click', foc);
                     app.nav.fullscreen = app.createElement('button', 'fullscreen', {
@@ -124,8 +121,10 @@ async function compileGs(app) {
                         top: 0
                     });
                     app.search.back.setAttribute('onclick', '(' + (() => {
-                        if (window.location.hash !== '#gs') return this.removeAttribute('onclick');
+                        if (window.location.hash !== '') return this.removeAttribute('onclick');
                         event.preventDefault();
+                        this.style.display = 'none';
+
                         app.main.library.style.removeProperty('display');
                         app.search.input.style.removeProperty('display');
                         app.search.title.style.display = 'none';
